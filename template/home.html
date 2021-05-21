@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="{% static 'img/dutimg.png' %}">
+
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:home'%}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://dut.udn.vn/Tuyensinh2021/Gioithieu/id/6060">Thông tin tuyển sinh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tham Khảo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'chat:chatroom'%}">Tư vấn tuyển sinh</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        {% block Home %}
+
+        {% endblock %}
+    </div>
+
+    <div class="container">
+        <img style="width: 870px;
+    height: 435;" src="{% static 'img/Tuyensinh2021.jpg' %}">
+    </div>
+    <br>
+    <div class="container">
+        <img style="width: 870px;
+    height: 435;" src="{% static 'img/Tuyensinh2021(2).jpg' %}">
+    </div>
+    <br>
+    <div class="container">
+        <img style="width: 870px;
+    height: auto;" src="{% static 'img/Tuyensinh2021(3).jpg' %}">
+    </div>
+</body>
+
+</html>
